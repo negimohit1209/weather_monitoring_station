@@ -4,10 +4,7 @@ import * as moment from 'moment';
 export default class Header extends Component {
     state = {
         time: moment()
-    };
-    componentDidMount() {
-        console.log(moment(this.state.time).format("hh:mm:ss a"))
-    }
+    };   
   render() {
     return (
         <div>
@@ -19,6 +16,12 @@ export default class Header extends Component {
         </Typography>
         <Typography variant="h5" color="inherit" key="3">
             Date: {moment(this.state.time).format("MMM D, YYYY")}
+        </Typography>
+        <Typography variant="h5" color="inherit" key="4">
+            Temperature: 34° C
+        </Typography>
+        <Typography variant="h5" color="inherit" key="4">
+            Pressure: 34° C
         </Typography>
         </div>
     )
