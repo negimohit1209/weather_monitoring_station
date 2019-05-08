@@ -6,9 +6,6 @@ import { CanvasJSChart} from '../../assets/canvasjs.react';
 
 
 export default class Chart extends Component {
-    state = {
-		data2 : [64,69,68,67,63,56,55,63,57,59,53,63,64,52,58,62]
-    }
     onClick = ()=> {
         var newData = [...this.state.data2];
 		newData.shift();
@@ -18,15 +15,16 @@ export default class Chart extends Component {
 
 	render() {
 		let options2 = [];
-		this.props.data.forEach((data, index) => {
-			options2.push({x: index+1, y: data})
-		});
+		this.props.data.forEach((data) => {
+			options2.push({x: new Date(data.Date), y: data.Humidity})
+        });
+        console.log(options2)
 		const options = {
 			animationEnabled: true,
 			exportEnabled: true,
 			theme: "light2", // "light1", "dark1", "dark2"
 			title:{
-				text: `${this.props.yaxis} reading every 1 hour`
+				text: `${this.props.yaxis} daily trends`
 			},
 			axisY: {
 				title: `${this.props.yaxis} Readings`,
@@ -35,12 +33,13 @@ export default class Chart extends Component {
 			},
 			axisX: {
 				title: "Time",
-				prefix: "T",
+				valueFormatString: "DD MMM",
 				interval: 1
 			},
 			data: [{
 				type: "line",
-				toolTipContent: `hour {x}: {y}${this.props.suffix}`,
+				xValueFormatString: "DD MMM YY",
+				toolTipContent: " <span style=\"color:#6D78AD\">{x}</span><br><b>Humidity:</b> {y} %",
 				dataPoints: options2
 			}]
 		}

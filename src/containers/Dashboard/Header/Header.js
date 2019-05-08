@@ -20,7 +20,7 @@ export default class Header extends Component {
         <Typography variant="h5" color="inherit" key="4">
             Temperature: 34° C
         </Typography>
-        <Typography variant="h5" color="inherit" key="4">
+        <Typography variant="h5" color="inherit" key="5">
             Pressure: 34° C
         </Typography>
         </div>

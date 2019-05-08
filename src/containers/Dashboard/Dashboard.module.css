@@ -1,7 +1,6 @@
 .Chart {
-    border: 1px solid black;
     width: 45%;
-    margin: 10px 10px;
+    margin: 10px 25px;
 }
 
 .ChartParent{
