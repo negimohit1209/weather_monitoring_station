@@ -6,6 +6,8 @@ import ChartMaxMin from '../../components/ChartMaxMIn/ChartMaxMin';
 import ChartHumidity from '../../components/ChartHumidity/ChartHumidity';
 import classes from './Dashboard.module.css';
 import SimpleCard from '../../components/Cards/Cards';
+import ReactVirtualizedTable from '../../components/Table/Table';
+import Navbar from '../../components/Navbar/Navbar';
 import {connect} from 'react-redux';
 import * as Actions from '../../Store/action/index';
 import Button from '@material-ui/core/Button';
@@ -30,6 +32,12 @@ class Dashboard extends Component {
       humiditySelection: val
     })
   }
+  onclick = () => {
+    if(this.props.location.pathname === '/')
+      this.props.history.push('/dashboard');
+    else
+      this.props.history.push('/');
+    }
   render() {
     let tempDataRaw = this.props.temperature
     let tempData = [];
@@ -39,7 +47,12 @@ class Dashboard extends Component {
     let humidityDataRaw = this.props.humidity
     let humidityData = [];
     humidityDataRaw.forEach((data) => {
-      humidityData.push(100 - data.value);
+      if(data.value <= 50){
+        humidityData.push(100 - data.value);
+      }else{
+        humidityData.push(data.value);
+      }
+      
     })
     let humidityDailyRaw = this.props.temperatureDaily
     let humidityDailyData = [];
@@ -53,9 +66,6 @@ class Dashboard extends Component {
     if(this.state.tempSelection === "D"){
         tempSelector =  (<ChartMaxMin data={this.props.temperatureDaily}/>)
     }
-    if(this.state.tempSelection === "M"){
-          tempSelector = (<h1>sadfasfas</h1> )
-    }
     let humiditySelector;
     if(this.state.humiditySelection === "RT"){
       humiditySelector = (<Chart data={humidityData} yaxis="Humidity" suffix="%"/>)
@@ -63,14 +73,11 @@ class Dashboard extends Component {
     if(this.state.humiditySelection === "D"){
         humiditySelector =  (<ChartHumidity data={this.props.temperatureDaily} yaxis="Humidity" suffix="%"/>)
     }
-    if(this.state.humiditySelection === "M"){
-          humiditySelector = (<h1>sadfasfas</h1> )
-    }
     return (
       <div>
+      <Navbar clicked={this.onclick} path={this.props.location.pathname}/>
         <Header />
         <Typography variant="h3" color="inherit">
-        Graph with a realtime increment.
         </Typography>
         <div className={classes.ChartParent}>
         <div className={classes.Chart}>
@@ -80,9 +87,6 @@ class Dashboard extends Component {
           </Button>
           <Button variant="outlined" color="primary" onClick={() => this.tClicked('D')}>
           DAILY
-          </Button>
-          <Button variant="outlined" color="secondary" onClick={() => this.tClicked('M')}>
-          MONTHLY
           </Button>
           {tempSelector}
         </SimpleCard>
@@ -95,13 +99,11 @@ class Dashboard extends Component {
           <Button variant="outlined" color="primary" onClick={() => this.hClicked('D')}>
           DAILY
           </Button>
-          <Button variant="outlined" color="secondary" onClick={() => this.hClicked('M')}>
-          MONTHLY
-          </Button>
           {humiditySelector}
       </SimpleCard>
       </div> 
         </div>
+        <ReactVirtualizedTable />
       </div>
     )
   }

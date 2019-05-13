@@ -4,10 +4,11 @@ import * as moment from 'moment';
 export default class Header extends Component {
     state = {
         time: moment()
-    };   
+    }; 
   render() {
     return (
         <div>
+        
         <Typography variant="h3" color="inherit" key="1">
             IIEST Shibpur, West Bengal
         </Typography>
@@ -21,7 +22,7 @@ export default class Header extends Component {
             Temperature: 34° C
         </Typography>
         <Typography variant="h5" color="inherit" key="5">
-            Pressure: 34° C
+            Humidity: 73%
         </Typography>
         </div>
     )
