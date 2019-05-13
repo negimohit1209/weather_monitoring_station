@@ -1,0 +1,13 @@
+.parent{
+    background-color: rgb(220,220,220);
+}
+
+.title{
+    text-align: center;
+}
+
+.textBody{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}

@@ -1,0 +1,20 @@
+.parent{
+    margin: 20px 0px;
+    display: flex;
+}
+.image {
+    width: 50%
+}
+
+.text{
+    width: 50%;
+}
+
+.title{
+    margin: 50px 0px;
+    text-align: center;
+}
+
+.paragraph{
+    text-align: center;
+}
