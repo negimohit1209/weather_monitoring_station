@@ -1,0 +1,25 @@
+.main{
+    background-color: rgb(240,240,240);
+    padding-bottom: 30px;
+}
+.title{
+    text-align: center;
+}
+.mentor{
+    text-align: center;
+}
+.card{
+    display:inline-block;
+}
+
+.team{
+    text-align: center;
+}
+
+.parent{
+    display: flex;
+}
+
+.child{
+    margin: auto
+}
