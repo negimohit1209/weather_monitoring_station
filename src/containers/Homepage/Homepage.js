@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Carousel from '../../components/Carosel/Carosel';
+import About from '../../components/About/About';
 export default class Homepage extends Component {
     onclick = () => {
       if(this.props.location.pathname === '/')
@@ -14,7 +15,7 @@ export default class Homepage extends Component {
       <div>
         <Navbar clicked={this.onclick} path={this.props.location.pathname}/>
         <Carousel clicked={this.onclick}/>
-        <h1>About</h1>
+        <About />
         <h1>team</h1>
         <h1>contact</h1>
         <h1>footer</h1>
