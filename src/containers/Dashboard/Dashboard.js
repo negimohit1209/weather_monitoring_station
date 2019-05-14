@@ -6,7 +6,6 @@ import ChartMaxMin from '../../components/ChartMaxMIn/ChartMaxMin';
 import ChartHumidity from '../../components/ChartHumidity/ChartHumidity';
 import classes from './Dashboard.module.css';
 import SimpleCard from '../../components/Cards/Cards';
-import ReactVirtualizedTable from '../../components/Table/Table';
 import Navbar from '../../components/Navbar/Navbar';
 import {connect} from 'react-redux';
 import * as Actions from '../../Store/action/index';
@@ -103,7 +102,7 @@ class Dashboard extends Component {
       </SimpleCard>
       </div> 
         </div>
-        <ReactVirtualizedTable />
+        
       </div>
     )
   }

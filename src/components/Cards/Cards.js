@@ -33,9 +33,6 @@ function SimpleCard(props) {
       <CardContent>
         {props.children}
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }

@@ -1,29 +1,31 @@
 import React, { Component } from 'react'
 import Typography from '@material-ui/core/Typography';
 import * as moment from 'moment';
+import classes from './Header.module.css';
 export default class Header extends Component {
     state = {
         time: moment()
     }; 
   render() {
     return (
-        <div>
-        
-        <Typography variant="h3" color="inherit" key="1">
-            IIEST Shibpur, West Bengal
+        <div className={classes.container}>
+        <div className={classes.child1}>
+        <Typography variant="h5" color="inherit" key="2" id={classes.typo1}>
+            Time: {moment(this.state.time).format("hh:mm a")}
         </Typography>
-        <Typography variant="h5" color="inherit" key="2">
-            Time: {moment(this.state.time).format("hh:mm:ss a")}
-        </Typography>
-        <Typography variant="h5" color="inherit" key="3">
+        <Typography variant="h5" color="inherit" key="3" id={classes.typo2}>
             Date: {moment(this.state.time).format("MMM D, YYYY")}
         </Typography>
-        <Typography variant="h5" color="inherit" key="4">
+        </div>
+        <div className={classes.child2}>
+        <Typography variant="h5" color="inherit" key="4" id={classes.typo3}>
             Temperature: 34° C
         </Typography>
-        <Typography variant="h5" color="inherit" key="5">
+        <Typography variant="h5" color="inherit" key="5" id={classes.typo4}>
             Humidity: 73%
         </Typography>
+        </div>
+        
         </div>
     )
   }
