@@ -5,7 +5,9 @@ const initialState = {
     temperature: [],
     humidity: [],
     temperatureDaily: [],
-    humidityDaily: []
+    humidityDaily: [],
+    currentTemp: null,
+    currentHumidity: null
 }
 
 const reducer = (state=initialState, action) => {
@@ -19,10 +21,11 @@ const reducer = (state=initialState, action) => {
             return {
                 ...state,
                 temperature: temperature,
-                humidity: humidity
+                humidity: humidity,
+                currentTemp: temperature[19].value,
+                currentHumidity: humidity[19].value
             }
         case actiontypes.SET_WEATHER_DAILY:
-            let temp = [], humi=[]
             return {
                 ...state,
                 temperatureDaily: [...action.weather],

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Carousel from '../../components/Carosel/Carosel';
 import About from '../../components/About/About';

@@ -19,10 +19,10 @@ export default class Header extends Component {
         </div>
         <div className={classes.child2}>
         <Typography variant="h5" color="inherit" key="4" id={classes.typo3}>
-            Temperature: 34° C
+            Temperature: {this.props.temp}° C
         </Typography>
         <Typography variant="h5" color="inherit" key="5" id={classes.typo4}>
-            Humidity: 73%
+            Humidity: {this.props.humi} %
         </Typography>
         </div>
         

@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types';
 import circuit from '../../assets/images/circuit.jpg';
 import Typography from '@material-ui/core/Typography';
 import classes from './Product.module.css'

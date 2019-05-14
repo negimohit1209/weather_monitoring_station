@@ -75,7 +75,7 @@ class Dashboard extends Component {
     return (
       <div>
       <Navbar clicked={this.onclick} path={this.props.location.pathname}/>
-        <Header />
+        <Header temp={this.props.currentTemp} humi={this.props.currentHumidity}/>
         <Typography variant="h3" color="inherit">
         </Typography>
         <div className={classes.ChartParent}>
@@ -112,7 +112,9 @@ const mapStateToProps = state => {
   return{
     temperature: state.temperature,
     humidity: state.humidity,
-    temperatureDaily: state.temperatureDaily
+    temperatureDaily: state.temperatureDaily,
+    currentTemp: state.currentTemp,
+    currentHumidity: state.currentHumidity
   }
 }
 const mapDispatchToProps = dispatch => {

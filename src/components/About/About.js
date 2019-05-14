@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Typography from '@material-ui/core/Typography';
 import classes from './About.module.css'
 function About(props) {

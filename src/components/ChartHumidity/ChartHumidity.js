@@ -1,6 +1,4 @@
 import React , {Component} from 'react';
-import CanvasJSReact from '../../assets/canvasjs.react';
-import { CanvasJS } from '../../assets/canvasjs.react';
 import { CanvasJSChart} from '../../assets/canvasjs.react';
 
 
