@@ -48,7 +48,9 @@ overflow:auto;
       width: 100%;
       transform: translate(-50%, -50%);
     }
-  
+    #title{
+      font-size: 50px;
+    }
     .belowCenter{
       position: absolute;
       top: 40%;

@@ -16,9 +16,11 @@ function Product(props) {
         </div>
         <div className={classes.paragraph}>
         <Typography variant="body2" gutterBottom>
-        body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-        unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
-        dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+        ESP8266 NodeMCU , DHT11 Humdity and Temperature sensor, breadboard, powerbank, and some connnecting wires
+        are the hardware tools needed to design the circuit. We've used Arduino IDE for programming the board.
+        NodeMCU reads the temperature and humidity values from the sensor and uploads it to ThngSpeak server. We retrieve the data
+        from ThingSpeak and plot the graph for visualising the data the getting a quick glance about the comparision of temperatue
+        and humidity values over a period of time.
       </Typography>
         </div>
         

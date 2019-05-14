@@ -19,13 +19,19 @@ function Team(props) {
     
   <div className={classes.parent}>
   <div className={classes.child}>
-  <TeamCard img={mohit} name="Mohit Negi" className={classes.singleCard}/>
+  <div className={classes.childin}><TeamCard img={mohit} name="Mohit Negi" className={classes.singleCard}/>
+  </div>
+  
   </div>
 <div className={classes.child}>
-<TeamCard img={danish} name="Mohd. Danish Kaleem" className={classes.singleCard}/>
+<div className={classes.childin}><TeamCard img={danish} name="Mohd. Danish Kaleem" className={classes.singleCard}/></div>
+
 </div>
     <div className={classes.child}>
+    <div className={classes.childin}>
     <TeamCard img={naman} name="Naman Kumar Mehta" className={classes.singleCard}/>
+    </div>
+    
     </div>
     
     

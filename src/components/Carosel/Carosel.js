@@ -19,7 +19,7 @@ function Carosel(props) {
         </div>
         <div className={classes.belowCenter}>
         <Typography variant="subtitle1" gutterBottom id={classes.subtitle}>
-        subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+        Personalised weather monitoring system using NodeMCU ESP8266. 
       </Typography>
         </div>
         <div className={classes.button}>

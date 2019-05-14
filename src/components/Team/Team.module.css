@@ -1,18 +1,35 @@
-.main{
-    background-color: rgb(240,240,240);
-    padding-bottom: 30px;
-}
 .title{
     text-align: center;
 }
-.child{
-    margin: auto
-}
-.team{
+.main{
+    background-color: rgb(240,240,240);
+    padding-bottom: 30px;
     text-align: center;
 }
+.childin{
+    display: inline-block;
+
+}
+
 @media only screen and (min-width: 768px) {
     .mentor{
+        text-align: center;
+    }
+    .main{
+        background-color: rgb(240,240,240);
+        padding-bottom: 30px;
+    }
+    .childin{
+        display: inline-block;
+        margin: auto;
+    }
+    .parent{
+        display: flex;
+    }
+    .child{
+        margin: auto;
+    }
+    .team{
         text-align: center;
     }
     
