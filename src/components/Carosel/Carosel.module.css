@@ -1,31 +1,66 @@
-.container{
-    position: relative;
-  text-align: center;
-  color: white;
-  overflow:auto;
-}
 .image {
-    opacity: 0.3;
+  opacity: 0.3;
+  height: 250px;
 }
-.centered {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-  }
+.container{
+  position: relative;
+text-align: center;
+color: white;
+overflow:auto;
+}
 
-  .belowCenter{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
+.centered{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+#title{
+  font-size: 30px;
+}
+.belowCenter{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+#subtitle{
+  font-size: 15px;
+}
+.button{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 768px) {
+  .image {
+      opacity: 0.3;
+      height: 100%;
   }
-  .button{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-  }
+  .centered {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .belowCenter{
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+    .button{
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+}

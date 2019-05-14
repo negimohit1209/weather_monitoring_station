@@ -14,12 +14,12 @@ function Carosel(props) {
         className = {classes.image}
         />
         <div className={classes.centered}>
-            <Typography variant="h3" gutterBottom>
+            <Typography variant="h3" gutterBottom id={classes.title}>
             Weather Monitoring System
         </Typography>
         </div>
         <div className={classes.belowCenter}>
-        <Typography variant="subtitle1" gutterBottom>
+        <Typography variant="subtitle1" gutterBottom id={classes.subtitle}>
         subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
       </Typography>
         </div>

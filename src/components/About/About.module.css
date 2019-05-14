@@ -1,13 +1,23 @@
 .parent{
     background-color: rgb(220,220,220);
 }
-
 .title{
     text-align: center;
 }
-
 .textBody{
-    width: 50%;
     text-align: center;
     margin: auto;
+    width: 80%;
+}
+@media only screen and (min-width: 768px) {
+    .parent{
+        background-color: rgb(220,220,220);
+    }
+    
+    
+    
+    .textBody{
+        width: 50%;
+        
+    }
 }
